@@ -1,0 +1,21 @@
+ 
+****************************************
+Report : clocks
+Design : UART_Tx
+Version: K-2015.06
+Date   : Fri Aug  2 05:56:37 2024
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+CLK           8680.60   {0 4340.3}          d         {CLK}
+SCAN_CLK      10000.00  {0 5000}            d         {scan_clk}
+--------------------------------------------------------------------------------
+1

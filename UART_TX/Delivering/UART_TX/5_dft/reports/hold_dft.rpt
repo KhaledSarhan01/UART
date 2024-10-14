@@ -1,0 +1,73 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : UART_Tx
+Version: K-2015.06
+Date   : Fri Aug  2 05:56:37 2024
+****************************************
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c   Library: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+Wire Load Model Mode: top
+
+  Startpoint: parity_block/internal_reg_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: parity_block/internal_reg_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  parity_block/internal_reg_reg_1_/CK (SDFFRQX2M)         0.00       0.00 r
+  parity_block/internal_reg_reg_1_/Q (SDFFRQX2M)          0.35       0.35 r
+  parity_block/internal_reg_reg_2_/SI (SDFFRQX2M)         0.00       0.35 r
+  data arrival time                                                  0.35
+
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.25       0.25
+  parity_block/internal_reg_reg_2_/CK (SDFFRQX2M)         0.00       0.25 r
+  library hold time                                      -0.18       0.07
+  data required time                                                 0.07
+  --------------------------------------------------------------------------
+  data required time                                                 0.07
+  data arrival time                                                 -0.35
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+  Startpoint: parity_block/internal_reg_reg_1_
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: parity_block/internal_reg_reg_2_
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  parity_block/internal_reg_reg_1_/CK (SDFFRQX2M)         0.00       0.00 r
+  parity_block/internal_reg_reg_1_/Q (SDFFRQX2M)          0.35       0.35 r
+  parity_block/internal_reg_reg_2_/SI (SDFFRQX2M)         0.00       0.35 r
+  data arrival time                                                  0.35
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.01       0.01
+  parity_block/internal_reg_reg_2_/CK (SDFFRQX2M)         0.00       0.01 r
+  library hold time                                      -0.18      -0.17
+  data required time                                                -0.17
+  --------------------------------------------------------------------------
+  data required time                                                -0.17
+  data arrival time                                                 -0.35
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.52
+
+
+1

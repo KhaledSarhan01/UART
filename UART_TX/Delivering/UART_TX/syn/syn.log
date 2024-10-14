@@ -1,0 +1,376 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/IC/.synopsys_dv_prefs.tcl
+########## Defining Top Module ##############
+set top_module UART_Tx
+UART_Tx
+cd ../fm
+set_svf UART_Tx.svf
+1
+cd ../syn
+################################################
+########## 1-Setting design Library ############
+################################################
+## Search Path
+lappend search_path "/home/IC/Assignments/UART_TX/std_lib"
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Assignments/UART_TX/std_lib
+lappend search_path "/home/IC/Assignments/UART_TX/RTL"
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Assignments/UART_TX/std_lib /home/IC/Assignments/UART_TX/RTL
+## Library Definitions
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Target Library and Link Library
+set target_library [list $TTLIB $SSLIB $FFLIB]
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+set link_library [list * $TTLIB $SSLIB $FFLIB]
+* scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+#################################################
+############ 2-Reading RTL Library ##############
+#################################################
+## Defining important variables
+set rtl_list [list FSM_Controller.v Parity.v Serializer.v Top_Module.v]
+FSM_Controller.v Parity.v Serializer.v Top_Module.v
+## Reading and linking the Project 
+read_file -format verilog $rtl_list
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+  Loading link library 'gtech'
+Loading verilog files: '/home/IC/Assignments/UART_TX/RTL/FSM_Controller.v' '/home/IC/Assignments/UART_TX/RTL/Parity.v' '/home/IC/Assignments/UART_TX/RTL/Serializer.v' '/home/IC/Assignments/UART_TX/RTL/Top_Module.v' 
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Assignments/UART_TX/RTL/FSM_Controller.v
+Compiling source file /home/IC/Assignments/UART_TX/RTL/Parity.v
+Compiling source file /home/IC/Assignments/UART_TX/RTL/Serializer.v
+Compiling source file /home/IC/Assignments/UART_TX/RTL/Top_Module.v
+
+Statistics for case statements in always block at line 30 in file
+	'/home/IC/Assignments/UART_TX/RTL/FSM_Controller.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            31            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 78 in file
+	'/home/IC/Assignments/UART_TX/RTL/FSM_Controller.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            82            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine FSM_controller line 21 in file
+		'/home/IC/Assignments/UART_TX/RTL/FSM_Controller.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  current_state_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Parity_calc line 11 in file
+		'/home/IC/Assignments/UART_TX/RTL/Parity.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  internal_reg_reg   | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine serializer line 17 in file
+		'/home/IC/Assignments/UART_TX/RTL/Serializer.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   serial_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    data_reg_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     Counter_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 22 in file
+	'/home/IC/Assignments/UART_TX/RTL/Top_Module.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            23            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Assignments/UART_TX/RTL/FSM_controller.db:FSM_controller'
+Loaded 4 designs.
+Current design is 'FSM_controller'.
+FSM_controller Parity_calc serializer UART_Tx
+link
+
+  Linking design 'FSM_controller'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (4 designs)               /home/IC/Assignments/UART_TX/RTL/FSM_controller.db, etc
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+1
+check_design
+1
+####################################################
+#########  3 & 4-Design Constraints ################
+####################################################
+current_design $top_module
+Current design is 'UART_Tx'.
+{UART_Tx}
+source -echo ./cons.tcl
+####################################################
+####### 3- Design Environment Constranits ##########
+####################################################
+## 1- Port and pin Definition
+set input_port_list [list "P_data" "Data_valid" "PAR_TYP" "PAR_EN"]
+set output_port_list [list "Tx_out" "Busy"]
+set main_clk_port "CLK"
+set reset_port  "rst"
+## 2- Input Driving Charactristics
+set buffer_cell "BUFX2M"
+set buffer_cell_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
+set_driving_cell [get_ports $input_port_list] -library $buffer_cell_library -lib_cell $buffer_cell
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+## 3- Ouptut Driving Charactrestics
+set load_cap 0.5
+set_load $load_cap [get_ports $output_port_list]
+## 4- Operating Conditions
+set fast_lib_name "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c"
+set slow_lib_name "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
+set_operating_conditions -min_library $fast_lib_name -min $fast_lib_name -max_library $slow_lib_name -max $slow_lib_name
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+## 5- Wire load Model
+set_wire_load_model -name "tsmc13_wl30" -library $slow_lib_name
+####################################################
+####### 3- Design Environment Constranits ##########
+####################################################
+## 1- Master Clock Definitions
+set clock_period 8680.6
+set clock_name "Main_CLK"
+create_clock [get_ports $main_clk_port] -name $clock_name -period $clock_period
+## 2- Clock Uncertianity
+set setup_skew 0.25
+set hold_skew 0.05
+set_clock_uncertainty -setup $setup_skew [get_clocks $clock_name] 
+set_clock_uncertainty -hold $hold_skew [get_clocks $clock_name] 
+## 3- Input Delays
+set input_delay [expr $clock_period * 0.3]
+set_input_delay $input_delay -clock $clock_name [get_ports $input_port_list]
+## 4- Output Delays
+set output_delay [expr $clock_period * 0.3]
+set_output_delay $output_delay -clock $clock_name [get_ports $output_port_list]
+## 5- Clock Transition
+set clock_transition 0.1
+set_clock_transition $clock_transition [get_clocks $clock_name]  
+## 6- Don't Touch 
+set_dont_touch_network [list $main_clk_port $reset_port]
+1
+################################################
+########### 5- Compilation #####################
+################################################
+compile 
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design UART_Tx has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'FSM_controller'
+  Processing 'Parity_calc'
+  Processing 'serializer'
+  Processing 'UART_Tx'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'serializer_DW01_inc_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02   41621.9      0.00       0.0       1.3                          
+    0:00:02   41621.9      0.00       0.0       1.3                          
+    0:00:02   41621.9      0.00       0.0       1.3                          
+    0:00:02   41621.9      0.00       0.0       1.3                          
+    0:00:02   41621.9      0.00       0.0       1.3                          
+    0:00:02   40509.9      0.00       0.0       1.3                          
+    0:00:02   40478.1      0.00       0.0       1.3                          
+    0:00:02   40478.1      0.00       0.0       1.3                          
+    0:00:02   40478.1      0.00       0.0       1.3                          
+    0:00:02   40478.1      0.00       0.0       1.3                          
+    0:00:02   40478.1      0.00       0.0       1.3                          
+    0:00:02   40612.2      0.00       0.0       0.1                          
+    0:00:02   40608.7      0.00       0.0       0.0                          
+    0:00:02   40608.7      0.00       0.0       0.0                          
+    0:00:02   40608.7      0.00       0.0       0.0                          
+    0:00:02   40608.7      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02   40608.7      0.00       0.0       0.0                          
+    0:00:02   40608.7      0.00       0.0       0.0                          
+    0:00:03   40442.8      0.00       0.0       2.4                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03   40442.8      0.00       0.0       2.4                          
+    0:00:03   40464.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03   40464.0      0.00       0.0       0.0                          
+    0:00:03   40464.0      0.00       0.0       0.0                          
+    0:00:03   40464.0      0.00       0.0       0.0                          
+    0:00:03   40464.0      0.00       0.0       0.0                          
+    0:00:03   40464.0      0.00       0.0       0.0                          
+    0:00:03   40464.0      0.00       0.0       0.0                          
+    0:00:03   40425.2      0.00       0.0       0.0                          
+    0:00:03   40425.2      0.00       0.0       0.0                          
+    0:00:03   40425.2      0.00       0.0       0.0                          
+    0:00:03   40425.2      0.00       0.0       0.0                          
+    0:00:03   40425.2      0.00       0.0       0.0                          
+    0:00:03   40425.2      0.00       0.0       0.0                          
+    0:00:03   40425.2      0.00       0.0       0.0                          
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+###############################################
+########### 6- Reports ########################
+###############################################
+cd Reports
+report_area -hierarchy > area.rpt
+report_power -hierarchy > power.rpt
+report_timing -max_paths 100 -delay_type min > hold.rpt
+report_timing -max_paths 100 -delay_type max > setup.rpt
+report_clock -attributes > clocks.rpt
+cd ..
+report_constraint -all_violators > constraints.rpt
+############################################
+###### Writing synthesis output files ######
+############################################
+cd Files
+write_file -format verilog -output UART_Tx.v
+Writing verilog file '/home/IC/Assignments/UART_TX/syn/Files/UART_Tx.v'.
+1
+write_file -format ddc -output UART_Tx.ddc 
+Writing ddc file 'UART_Tx.ddc'.
+1
+write_sdf UART_Tx.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/IC/Assignments/UART_TX/syn/Files/UART_Tx.sdf'. (WT-3)
+1
+write_sdc UART_Tx.sdc
+1
+cd ..
+cd ../fm
+set_svf -off
+1
+cd ../syn
+exit
+
+Memory usage for main task 275 Mbytes.
+Memory usage for this session 275 Mbytes.
+CPU usage for this session 6 seconds ( 0.00 hours ).
+
+Thank you...

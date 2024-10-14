@@ -1,0 +1,43 @@
+{D:/Digital/Eltamseh Diplomia/System/UART_RX/tb.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Digital/Eltamseh Diplomia/System/UART_RX/tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module tb_UART_Rx
+
+Top level modules:
+	tb_UART_Rx
+
+} {} {}} {D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampler.v} {1 {vlog -work work -vopt -stats=none {D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampler.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Sampler
+
+Top level modules:
+	Sampler
+
+} {} {}} {D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Configuration.v} {1 {vlog -work work -vopt -stats=none {D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Configuration.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Configuration_block
+
+Top level modules:
+	Configuration_block
+
+} {} {}} {D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Controller.v} {1 {vlog -work work -vopt -stats=none {D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Controller.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module UART_Rx_Controller
+
+Top level modules:
+	UART_Rx_Controller
+
+} {} {}} {D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/UART_Rx_RTL.v} {1 {vlog -work work -vopt -stats=none {D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/UART_Rx_RTL.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module UART_Rx
+
+Top level modules:
+	UART_Rx
+
+} {} {}} {D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampling_Register.v} {1 {vlog -work work -vopt -stats=none {D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampling_Register.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Sampling_Register
+
+Top level modules:
+	Sampling_Register
+
+} {} {}}

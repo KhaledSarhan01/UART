@@ -1,0 +1,5 @@
+../Design/FSM_Controller.v
+../Design/Parity.v
+../Design/Serializer.v
+../Design/UART_TX.v
+../Testbench/Testbench.sv

@@ -1,0 +1,1084 @@
+$date
+	Wed Jul 17 00:12:16 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module tb_UART_Rx $end
+$var parameter 0 ! RX_Clock_Period $end
+$var parameter 8 " prescale_value $end
+$var parameter 0 # TX_Clock_Period $end
+$var parameter 1 $ EVEN $end
+$var parameter 1 % ODD $end
+$var parameter 1 & ENABLED $end
+$var parameter 1 ' DISABLED $end
+$var parameter 1 ( START_BIT $end
+$var parameter 1 ) STOP_BIT $end
+$var reg 1 * RX_CLK $end
+$var reg 1 + tb_RST $end
+$var reg 1 , tb_RX_IN $end
+$var reg 1 - tb_PAR_TYP $end
+$var reg 1 . tb_PAR_EN $end
+$var reg 6 / tb_Prescale [5:0] $end
+$var wire 1 0 tb_P_DATA [7] $end
+$var wire 1 1 tb_P_DATA [6] $end
+$var wire 1 2 tb_P_DATA [5] $end
+$var wire 1 3 tb_P_DATA [4] $end
+$var wire 1 4 tb_P_DATA [3] $end
+$var wire 1 5 tb_P_DATA [2] $end
+$var wire 1 6 tb_P_DATA [1] $end
+$var wire 1 7 tb_P_DATA [0] $end
+$var wire 1 8 tb_Data_valid $end
+$var wire 1 9 tb_Parity_Error $end
+$var wire 1 : tb_Stop_Error $end
+$var reg 11 ; count_tx_clk [10:0] $end
+$var reg 1 < TX_CLK $end
+$scope task Initialization $end
+$upscope $end
+$scope task Reset_Test $end
+$var reg 1 = success_flag $end
+$upscope $end
+$scope task Single_Packet $end
+$var reg 8 > Data_IN [7:0] $end
+$var reg 1 ? parity_bit $end
+$var reg 1 @ start_bit $end
+$var reg 1 A stop_bit $end
+$var reg 1 B parity_enable $end
+$var reg 1 C parity_type $end
+$upscope $end
+$scope task Double_Packet $end
+$var reg 8 D Data_IN_1 [7:0] $end
+$var reg 1 E parity_bit_1 $end
+$var reg 8 F Data_IN_2 [7:0] $end
+$var reg 1 G parity_bit_2 $end
+$var reg 1 H parity_enable $end
+$var reg 1 I parity_type $end
+$var reg 1 J success_flag $end
+$upscope $end
+$scope task check_output $end
+$var reg 8 K reference_P_Data [7:0] $end
+$var reg 1 L reference_Data_Valid $end
+$var reg 1 M reference_Parity_Error $end
+$var reg 1 N reference_Stop_Error $end
+$var reg 1 O output_observation_flag $end
+$upscope $end
+$scope task Configuration_inputs $end
+$var reg 1 P parity_enable $end
+$var reg 1 Q parity_type $end
+$upscope $end
+$scope task load_start_bit $end
+$var reg 1 R start_bit $end
+$var reg 1 S success_flag $end
+$upscope $end
+$scope task load_Data_bits $end
+$var reg 8 T Data_IN [7:0] $end
+$var reg 1 U success_flag $end
+$var integer 32 V i $end
+$upscope $end
+$scope task load_parity_bit $end
+$var reg 1 W parity_bit $end
+$var reg 1 X parity_type $end
+$var reg 8 Y Data_IN [7:0] $end
+$var reg 1 Z right_even_parity $end
+$var reg 1 [ right_odd_parity $end
+$var reg 1 \ success_flag $end
+$upscope $end
+$scope task load_stop_bit $end
+$var reg 1 ] stop_bit $end
+$var reg 8 ^ Data_IN [7:0] $end
+$var reg 1 _ success_flag $end
+$upscope $end
+$scope task load_void_data $end
+$var reg 8 ` Data_IN [7:0] $end
+$var reg 1 a stop_bit $end
+$var reg 1 b success_flag $end
+$upscope $end
+$scope task Reset $end
+$upscope $end
+$scope task posedge_TX_Clock $end
+$upscope $end
+$scope module DUT $end
+$var wire 1 c CLK $end
+$var wire 1 d RST $end
+$var wire 1 e RX_IN $end
+$var wire 1 f PAR_TYP $end
+$var wire 1 g PAR_EN $end
+$var wire 1 h Prescale [5] $end
+$var wire 1 i Prescale [4] $end
+$var wire 1 j Prescale [3] $end
+$var wire 1 k Prescale [2] $end
+$var wire 1 l Prescale [1] $end
+$var wire 1 m Prescale [0] $end
+$var wire 1 0 P_DATA [7] $end
+$var wire 1 1 P_DATA [6] $end
+$var wire 1 2 P_DATA [5] $end
+$var wire 1 3 P_DATA [4] $end
+$var wire 1 4 P_DATA [3] $end
+$var wire 1 5 P_DATA [2] $end
+$var wire 1 6 P_DATA [1] $end
+$var wire 1 7 P_DATA [0] $end
+$var wire 1 8 data_valid $end
+$var wire 1 9 Parity_Error $end
+$var wire 1 : Stop_Error $end
+$var wire 1 n BIT_COUNT_UART_Rx [3] $end
+$var wire 1 o BIT_COUNT_UART_Rx [2] $end
+$var wire 1 p BIT_COUNT_UART_Rx [1] $end
+$var wire 1 q BIT_COUNT_UART_Rx [0] $end
+$var wire 1 r Bit_TICK_UART_Rx $end
+$var wire 1 s sampled_bit_UART_Rx $end
+$var wire 1 t Data_out_UART_Rx [7] $end
+$var wire 1 u Data_out_UART_Rx [6] $end
+$var wire 1 v Data_out_UART_Rx [5] $end
+$var wire 1 w Data_out_UART_Rx [4] $end
+$var wire 1 x Data_out_UART_Rx [3] $end
+$var wire 1 y Data_out_UART_Rx [2] $end
+$var wire 1 z Data_out_UART_Rx [1] $end
+$var wire 1 { Data_out_UART_Rx [0] $end
+$var wire 1 | start_bit_UART_Rx $end
+$var wire 1 } parity_bit_UART_Rx $end
+$var wire 1 ~ stop_bit_UART_Rx $end
+$var wire 1 !! block_enable_word_UART_Rx [3] $end
+$var wire 1 "! block_enable_word_UART_Rx [2] $end
+$var wire 1 #! block_enable_word_UART_Rx [1] $end
+$var wire 1 $! block_enable_word_UART_Rx [0] $end
+$var wire 1 %! error_flag_word_UART_Rx [2] $end
+$var wire 1 &! error_flag_word_UART_Rx [1] $end
+$var wire 1 '! error_flag_word_UART_Rx [0] $end
+$var reg 2 (! Prescale_Select [1:0] $end
+$var wire 1 )! sample_one_bit_UART_Rx $end
+$var wire 1 *! sample_three_bit_UART_Rx $end
+$var wire 1 +! start_bit_detector_UART_Rx $end
+$var wire 1 ,! stop_bit $end
+$scope module UART_Sampling_Register $end
+$var wire 1 c clk $end
+$var wire 1 d rst_n $end
+$var wire 1 n BIT_COUNT [3] $end
+$var wire 1 o BIT_COUNT [2] $end
+$var wire 1 p BIT_COUNT [1] $end
+$var wire 1 q BIT_COUNT [0] $end
+$var wire 1 )! sample_one_bit $end
+$var wire 1 *! sample_three_bit $end
+$var wire 1 g PAR_EN $end
+$var wire 1 s sampled_bit $end
+$var wire 1 t Data_out [7] $end
+$var wire 1 u Data_out [6] $end
+$var wire 1 v Data_out [5] $end
+$var wire 1 w Data_out [4] $end
+$var wire 1 x Data_out [3] $end
+$var wire 1 y Data_out [2] $end
+$var wire 1 z Data_out [1] $end
+$var wire 1 { Data_out [0] $end
+$var wire 1 | start_bit $end
+$var wire 1 } parity_bit $end
+$var wire 1 ~ stop_bit $end
+$var reg 11 -! sampled_data_register [10:0] $end
+$upscope $end
+$scope module UART_Config_block $end
+$var wire 1 c clk $end
+$var wire 1 d rst_n $end
+$var wire 1 !! block_enable_word [3] $end
+$var wire 1 "! block_enable_word [2] $end
+$var wire 1 #! block_enable_word [1] $end
+$var wire 1 $! block_enable_word [0] $end
+$var wire 1 %! error_flag_word [2] $end
+$var wire 1 &! error_flag_word [1] $end
+$var wire 1 '! error_flag_word [0] $end
+$var reg 1 .! BIT_TICK $end
+$var reg 1 /! sample_one_bit $end
+$var reg 1 0! sample_three_bit $end
+$var wire 1 1! Prescale [1] $end
+$var wire 1 2! Prescale [0] $end
+$var wire 1 f PAR_TYP $end
+$var wire 1 | start_bit $end
+$var wire 1 } parity_bit $end
+$var wire 1 ,! stop_bit $end
+$var wire 1 t data_out [7] $end
+$var wire 1 u data_out [6] $end
+$var wire 1 v data_out [5] $end
+$var wire 1 w data_out [4] $end
+$var wire 1 x data_out [3] $end
+$var wire 1 y data_out [2] $end
+$var wire 1 z data_out [1] $end
+$var wire 1 { data_out [0] $end
+$var wire 1 3! sampler_enable $end
+$var wire 1 4! start_enable $end
+$var wire 1 5! parity_enable $end
+$var wire 1 6! stop_enable $end
+$var reg 1 7! start_error $end
+$var reg 1 8! parity_error $end
+$var reg 1 9! stop_error $end
+$var reg 8 :! Edge_counter [7:0] $end
+$var wire 1 ;! obtained_even_parity_bit $end
+$var wire 1 <! obtained_odd_parity_bit $end
+$upscope $end
+$scope module UART_Sampler $end
+$var wire 1 c clk $end
+$var wire 1 d rst_n $end
+$var wire 1 e Serial_Data_IN $end
+$var reg 1 =! Sampled_Bit_OUT $end
+$var wire 1 )! sample_one_bit $end
+$var wire 1 *! sample_three_bit $end
+$var wire 1 !! sampler_enable $end
+$var wire 1 +! start_bit_detector $end
+$var reg 3 >! Data_Storage [2:0] $end
+$upscope $end
+$scope module UART_FSM_Controller $end
+$var parameter 3 ?! IDLE $end
+$var parameter 3 @! START $end
+$var parameter 3 A! DATA $end
+$var parameter 3 B! PARITY $end
+$var parameter 3 C! STOP $end
+$var parameter 3 D! DONE $end
+$var wire 1 c clk $end
+$var wire 1 d rst_n $end
+$var wire 1 g PAR_EN $end
+$var reg 1 E! Data_valid $end
+$var reg 4 F! block_enable_word [3:0] $end
+$var wire 1 %! error_flag_word [2] $end
+$var wire 1 &! error_flag_word [1] $end
+$var wire 1 '! error_flag_word [0] $end
+$var wire 1 r BIT_TICK $end
+$var wire 1 n BIT_COUNT [3] $end
+$var wire 1 o BIT_COUNT [2] $end
+$var wire 1 p BIT_COUNT [1] $end
+$var wire 1 q BIT_COUNT [0] $end
+$var wire 1 +! start_bit_detector $end
+$var reg 4 G! BIT_COUNT_reg [3:0] $end
+$var reg 3 H! current_state [2:0] $end
+$var reg 3 I! next_state [2:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin std $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1*
+1+
+1,
+0-
+0.
+b10000 /
+bx ;
+b10 (!
+bx -!
+0.!
+0/!
+00!
+07!
+08!
+09!
+b0 :!
+0=!
+bx >!
+0E!
+b0 F!
+bx G!
+b0 H!
+b0 I!
+1<
+x=
+bx >
+x?
+x@
+xA
+xB
+xC
+bx D
+xE
+bx F
+xG
+xH
+xI
+xJ
+bx K
+xL
+xM
+xN
+xO
+xP
+xQ
+xR
+xS
+bx T
+xU
+xW
+xX
+bx Y
+xZ
+x[
+x\
+x]
+bx ^
+x_
+bx `
+xa
+xb
+b10000 "
+b0 $
+b1 %
+b1 &
+b0 '
+b0 (
+b1 )
+b0 ?!
+b1 @!
+b11 A!
+b10 B!
+b110 C!
+b100 D!
+r542.6 !
+r8680.549999999999 #
+bx V
+03!
+04!
+05!
+06!
+x;!
+x<!
+1c
+1d
+1e
+0f
+0g
+0m
+0l
+0k
+0j
+1i
+0h
+02!
+11!
+x7
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+08
+09
+0:
+xq
+xp
+xo
+xn
+0r
+0s
+x{
+xz
+xy
+xx
+xw
+xv
+xu
+xt
+x|
+0}
+x~
+0$!
+0#!
+0"!
+0!!
+0'!
+0&!
+0%!
+0)!
+0*!
+0+!
+z,!
+$end
+#271300
+0*
+0c
+#542600
+0+
+1*
+0d
+1c
+b0 -!
+b111 >!
+b0 G!
+0~
+0q
+0p
+0o
+0n
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+07
+06
+05
+04
+03
+02
+01
+00
+0|
+1<!
+0;!
+#813900
+0*
+0c
+#1085200
+1*
+1c
+#1356500
+0*
+0c
+#1492150
+b0 K
+0L
+0M
+0N
+1O
+1=
+#1627800
+1*
+1c
+#1899100
+0*
+0c
+#2034750
+1+
+b10110010 >
+0?
+0@
+1A
+0B
+0C
+0P
+0Q
+0R
+b0 ;
+1d
+#2170400
+1*
+1c
+#2441700
+0*
+0c
+#2713000
+1*
+1c
+#2984300
+0*
+0c
+#3255600
+1*
+1c
+#3526900
+0*
+0c
+#3798200
+1*
+1c
+#4069500
+0*
+0c
+#4340275
+0<
+#4340800
+1*
+1c
+#4612100
+0*
+0c
+#4883400
+1*
+1c
+#5154700
+0*
+0c
+#5426000
+1*
+1c
+#5697300
+0*
+0c
+#5968600
+1*
+1c
+#6239900
+0*
+0c
+#6511200
+1*
+1c
+#6782500
+0*
+0c
+#7053800
+1*
+1c
+#7325100
+0*
+0c
+#7596400
+1*
+1c
+#7867700
+0*
+0c
+#8139000
+1*
+1c
+#8410300
+0*
+0c
+#8680550
+1<
+b1 ;
+0,
+1S
+b10110010 T
+b0 V
+0e
+1+!
+b1 I!
+#8681600
+1*
+1c
+b1 H!
+b1100 F!
+1"!
+1!!
+14!
+13!
+#8952900
+0*
+0c
+#9224200
+1*
+1c
+b1 :!
+b110 >!
+#9495500
+0*
+0c
+#9766800
+1*
+1c
+b10 :!
+b100 >!
+#10038100
+0*
+0c
+#10309400
+1*
+1c
+b11 :!
+b0 >!
+#10580700
+0*
+0c
+#10852000
+1*
+1c
+b100 :!
+#11123300
+0*
+0c
+#11394600
+1*
+1c
+b101 :!
+#11665900
+0*
+0c
+#11937200
+1*
+1c
+b110 :!
+#12208500
+0*
+0c
+#12479800
+1*
+1c
+b111 :!
+#12751100
+0*
+0c
+#13020825
+0<
+#13022400
+1*
+1c
+b1000 :!
+#13293700
+0*
+0c
+#13565000
+1*
+1c
+b1001 :!
+10!
+1*!
+#13836300
+0*
+0c
+#14107600
+1*
+1c
+b1010 :!
+00!
+0*!
+#14378900
+0*
+0c
+#14650200
+1*
+1c
+b1011 :!
+#14921500
+0*
+0c
+#15192800
+1*
+1c
+b1100 :!
+#15464100
+0*
+0c
+#15735400
+1*
+1c
+b1101 :!
+#16006700
+0*
+0c
+#16278000
+1*
+1c
+b1110 :!
+#16549300
+0*
+0c
+#16820600
+1*
+1c
+b1111 :!
+1.!
+1r
+#17091900
+0*
+0c
+#17361100
+1<
+b10 ;
+b1 V
+#17363200
+1*
+1c
+b0 :!
+b1 G!
+1q
+b11 I!
+0.!
+0r
+#17634500
+0*
+0c
+#17905800
+1*
+1c
+b1 :!
+b11 H!
+b1000 F!
+0"!
+04!
+#18177100
+0*
+0c
+#18448400
+1*
+1c
+b10 :!
+#18719700
+0*
+0c
+#18991000
+1*
+1c
+b11 :!
+#19262300
+0*
+0c
+#19533600
+1*
+1c
+b100 :!
+#19804900
+0*
+0c
+#20076200
+1*
+1c
+b101 :!
+#20347500
+0*
+0c
+#20618800
+1*
+1c
+b110 :!
+#20890100
+0*
+0c
+#21161400
+1*
+1c
+b111 :!
+#21432700
+0*
+0c
+#21701375
+0<
+#21704000
+1*
+1c
+b1000 :!
+#21975300
+0*
+0c
+#22246600
+1*
+1c
+b1001 :!
+10!
+1*!
+#22517900
+0*
+0c
+#22789200
+1*
+1c
+b1010 :!
+00!
+0*!
+#23060500
+0*
+0c
+#23331800
+1*
+1c
+b1011 :!
+#23603100
+0*
+0c
+#23874400
+1*
+1c
+b1100 :!
+#24145700
+0*
+0c
+#24417000
+1*
+1c
+b1101 :!
+#24688300
+0*
+0c
+#24959600
+1*
+1c
+b1110 :!
+#25230900
+0*
+0c
+#25502200
+1*
+1c
+b1111 :!
+1.!
+1r
+#25773500
+0*
+0c
+#26041650
+1<
+b11 ;
+b10 V
+#26044800
+1*
+1c
+b0 :!
+b10 G!
+0q
+1p
+0.!
+0r
+#26316100
+0*
+0c
+#26587400
+1*
+1c
+b1 :!
+#26858700
+0*
+0c
+#27130000
+1*
+1c
+b10 :!
+#27401300
+0*
+0c
+#27672600
+1*
+1c
+b11 :!
+#27943900
+0*
+0c
+#28215200
+1*
+1c
+b100 :!
+#28486500
+0*
+0c
+#28757800
+1*
+1c
+b101 :!
+#29029100
+0*
+0c
+#29300400
+1*
+1c
+b110 :!
+#29571700
+0*
+0c
+#29843000
+1*
+1c
+b111 :!
+#30114300
+0*
+0c
+#30381925
+0<
+#30385600
+1*
+1c
+b1000 :!
+#30656900
+0*
+0c
+#30928200
+1*
+1c
+b1001 :!
+10!
+1*!
+#31199500
+0*
+0c
+#31470800
+1*
+1c
+b1010 :!
+00!
+0*!
+#31742100
+0*
+0c
+#32013400
+1*
+1c
+b1011 :!
+#32284700
+0*
+0c
+#32556000
+1*
+1c
+b1100 :!
+#32827300
+0*
+0c
+#33098600
+1*
+1c
+b1101 :!
+#33369900
+0*
+0c
+#33641200
+1*
+1c
+b1110 :!
+#33912500
+0*
+0c
+#34183800
+1*
+1c
+b1111 :!
+1.!
+1r
+#34455100
+0*
+0c
+#34722200
+1<
+b100 ;
+b11 V
+#34726400
+1*
+1c
+b0 :!
+b11 G!
+1q
+0.!
+0r
+#34997700
+0*
+0c
+#35269000
+1*
+1c
+b1 :!
+#35540300
+0*
+0c
+#35811600
+1*
+1c
+b10 :!
+#36082900
+0*
+0c
+#36354200
+1*
+1c
+b11 :!
+#36625500
+0*
+0c
+#36896800
+1*
+1c
+b100 :!
+#37168100
+0*
+0c
+#37439400
+1*
+1c
+b101 :!
+#37710700
+0*
+0c
+#37982000
+1*
+1c
+b110 :!
+#38253300
+0*
+0c
+#38524600
+1*
+1c
+b111 :!
+#38795900
+0*
+0c
+#39062475
+0<
+#39067200
+1*
+1c
+b1000 :!
+#39338500
+0*
+0c
+#39609800
+1*
+1c
+b1001 :!
+10!
+1*!
+#39881100
+0*
+0c
+#40152400
+1*
+1c
+b1010 :!
+00!
+0*!
+#40423700
+0*
+0c
+#40695000
+1*
+1c
+b1011 :!
+#40966300
+0*
+0c
+#41237600
+1*
+1c
+b1100 :!
+#41508900
+0*
+0c
+#41780200
+1*
+1c
+b1101 :!
+#42051500
+0*
+0c
+#42322800
+1*
+1c
+b1110 :!
+#42594100
+0*
+0c
+#42865400
+1*
+1c
+b1111 :!
+1.!
+1r
+#43136700
+0*
+0c
+#43402750
+1<
+b101 ;
+b100 V
+#43408000
+1*
+1c
+b0 :!
+b100 G!
+0q
+0p
+1o
+0.!
+0r
+#43679300
+0*
+0

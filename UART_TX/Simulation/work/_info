@@ -1,0 +1,107 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Programs\modelsim
+vFSM_controller
+Z1 !s100 SVZO@FX8IE5[a;oJ24DUg3
+Z2 In4J^i]e_i6cgG:m528:=?2
+Z3 VAV1NTk7zAFc:4eN4]VW=O1
+Z4 dD:\Digital\Eltamseh Diplomia\System\UART_TX\Simulation
+Z5 w1710444516
+Z6 8D:/Digital/Eltamseh Diplomia/System/UART_TX/FSM_Controller.v
+Z7 FD:/Digital/Eltamseh Diplomia/System/UART_TX/FSM_Controller.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|D:/Digital/Eltamseh Diplomia/System/UART_TX/FSM_Controller.v|
+Z10 o-work work -O0
+Z11 n@f@s@m_controller
+Z12 !s108 1710445870.070000
+Z13 !s107 D:/Digital/Eltamseh Diplomia/System/UART_TX/FSM_Controller.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vParity_calc
+Z14 ImE87U^cJk=XF4Bg3k_@id0
+Z15 Vanizm=Sb4]0m>zi_JWReF3
+R4
+Z16 w1710445859
+Z17 8D:/Digital/Eltamseh Diplomia/System/UART_TX/Parity.v
+Z18 FD:/Digital/Eltamseh Diplomia/System/UART_TX/Parity.v
+L0 1
+R8
+r1
+31
+Z19 !s90 -reportprogress|300|-work|work|D:/Digital/Eltamseh Diplomia/System/UART_TX/Parity.v|
+R10
+Z20 n@parity_calc
+Z21 !s100 dEfNVfH96CHGGJFZHE_^02
+Z22 !s108 1710445870.199000
+Z23 !s107 D:/Digital/Eltamseh Diplomia/System/UART_TX/Parity.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vserializer
+Z24 !s100 o;?BoJg8z[MC5_LGUz^>l0
+Z25 IPl[M5SeORZfVUGb0eGfMB2
+Z26 VfL7BQz6059[ZcmNmf=i>O1
+R4
+Z27 w1710445002
+Z28 8D:/Digital/Eltamseh Diplomia/System/UART_TX/Serializer.v
+Z29 FD:/Digital/Eltamseh Diplomia/System/UART_TX/Serializer.v
+L0 1
+R8
+r1
+31
+Z30 !s90 -reportprogress|300|-work|work|D:/Digital/Eltamseh Diplomia/System/UART_TX/Serializer.v|
+R10
+Z31 !s108 1710445870.437000
+Z32 !s107 D:/Digital/Eltamseh Diplomia/System/UART_TX/Serializer.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_UART_TX
+Z33 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z34 !s100 N9nZYQGo4YQ`c]^3eRFK<2
+Z35 IfkhgW;F1<`6k7RWdc]i@Y2
+Z36 VlG>F:3bB;LK:;J`kUFQ?22
+Z37 !s105 Testbench_sv_unit
+S1
+R4
+Z38 w1710445760
+Z39 8D:/Digital/Eltamseh Diplomia/System/UART_TX/Testbench.sv
+Z40 FD:/Digital/Eltamseh Diplomia/System/UART_TX/Testbench.sv
+L0 2
+R8
+r1
+31
+Z41 !s90 -reportprogress|300|-work|work|-sv|D:/Digital/Eltamseh Diplomia/System/UART_TX/Testbench.sv|
+Z42 o-work work -sv -O0
+Z43 ntb_@u@a@r@t_@t@x
+!i10b 1
+!s85 0
+Z44 !s108 1710445870.547000
+Z45 !s107 D:/Digital/Eltamseh Diplomia/System/UART_TX/Testbench.sv|
+!s101 -O0
+vUART_Tx
+!i10b 1
+Z46 !s100 J0zOSL40VNYHbKbUm8nGV2
+Z47 I_8[`N3=G:0RzN1RSY5TW=3
+Z48 V?C`j1;^AF:=z8E5kZbJk[0
+R4
+Z49 w1710366462
+Z50 8D:/Digital/Eltamseh Diplomia/System/UART_TX/Top_Module.v
+Z51 FD:/Digital/Eltamseh Diplomia/System/UART_TX/Top_Module.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1710445870.918000
+!s107 D:/Digital/Eltamseh Diplomia/System/UART_TX/Top_Module.v|
+Z52 !s90 -reportprogress|300|-work|work|D:/Digital/Eltamseh Diplomia/System/UART_TX/Top_Module.v|
+!s101 -O0
+R10
+Z53 n@u@a@r@t_@tx

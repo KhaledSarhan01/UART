@@ -1,0 +1,158 @@
+m255
+K3
+z0
+!s99 nomlopt
+!s11f MIXED_VERSIONS
+13
+cModel Technology
+dD:\Digital\Projects\SPI\Design\Original
+T_opt
+!s110 1722880546
+V@TMX:e1@YDLEAQ]ValKm92
+04 10 4 work tb_UART_Rx fast 0
+=1-902e161d0c93-66b11220-3c9-1220
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vConfiguration_block
+!s110 1722880527
+!i10b 1
+!s100 ?[>C?i5zR4KokZmVb1hA40
+ID7H]o[FI37OA?ifn4`l;Z3
+Z1 dD:/Digital/Eltamseh Diplomia/System/UART_RX
+w1721152291
+8D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Configuration.v
+FD:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Configuration.v
+!i122 0
+L0 1 201
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z4 !s108 1722880527.000000
+!s107 D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Configuration.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Configuration.v|
+!i113 0
+Z5 o-work work
+R0
+n@configuration_block
+vSampler
+Z6 !s110 1722880528
+!i10b 1
+!s100 6Ok3l@6jZ8[b:bRG8A_o10
+IB?XP8Uf1fCK[TDYEGK;G]1
+R1
+w1721151213
+8D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampler.v
+FD:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampler.v
+!i122 2
+L0 1 46
+R2
+R3
+r1
+!s85 0
+31
+Z7 !s108 1722880528.000000
+!s107 D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampler.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampler.v|
+!i113 0
+R5
+R0
+n@sampler
+vSampling_Register
+R6
+!i10b 1
+!s100 kBK8>Q1F:1mb<fBfC3n:U2
+IRTH0?CX89mT2C[GZ5R2X22
+R1
+w1721151159
+8D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampling_Register.v
+FD:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampling_Register.v
+!i122 3
+L0 1 44
+R2
+R3
+r1
+!s85 0
+31
+R7
+!s107 D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampling_Register.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Sampling_Register.v|
+!i113 0
+R5
+R0
+n@sampling_@register
+vtb_UART_Rx
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R6
+!i10b 1
+!s100 hUfYIgPhbihFQU_FdPUzW3
+Ih>IFn7[kXmcX<O71jBQ=g0
+S1
+R1
+w1721163429
+8D:/Digital/Eltamseh Diplomia/System/UART_RX/tb.sv
+FD:/Digital/Eltamseh Diplomia/System/UART_RX/tb.sv
+!i122 5
+L0 5 469
+R2
+R3
+r1
+!s85 0
+31
+R7
+!s107 D:/Digital/Eltamseh Diplomia/System/UART_RX/tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Digital/Eltamseh Diplomia/System/UART_RX/tb.sv|
+!i113 0
+o-work work -sv
+R0
+ntb_@u@a@r@t_@rx
+vUART_Rx
+R6
+!i10b 1
+!s100 j2ZE<OIoC8W8S]2i>;Y3X2
+ITP8RD27Io^MJ:3]Km7j9n0
+R1
+w1721152192
+8D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/UART_Rx_RTL.v
+FD:/Digital/Eltamseh Diplomia/System/UART_RX/Design/UART_Rx_RTL.v
+!i122 4
+L0 1 128
+R2
+R3
+r1
+!s85 0
+31
+R7
+!s107 D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/UART_Rx_RTL.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/UART_Rx_RTL.v|
+!i113 0
+R5
+R0
+n@u@a@r@t_@rx
+vUART_Rx_Controller
+R6
+!i10b 1
+!s100 `V;k:maUM8P?Z6iod3A_c1
+IfLBKIOH@3o`lIS8Si921j3
+R1
+w1721153526
+8D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Controller.v
+FD:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Controller.v
+!i122 1
+L0 1 151
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Controller.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital/Eltamseh Diplomia/System/UART_RX/Design/Controller.v|
+!i113 0
+R5
+R0
+n@u@a@r@t_@rx_@controller

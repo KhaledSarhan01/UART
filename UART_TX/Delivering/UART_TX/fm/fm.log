@@ -1,0 +1,255 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC (RHEL64)
+Current time: Fri Jul 26 03:12:25 2024
+
+Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
+###################################################################
+########################### Variables #############################
+###################################################################
+set SSLIB "/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+set FFLIB "/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+###################################################################
+############################ Guidance #############################
+###################################################################
+# Synopsys setup variable
+set synopsys_auto_setup true
+true
+# Formality Setup File
+set_svf "/home/IC/Assignments/UART_TX/fm/UART_Tx.svf"
+SVF set to '/home/IC/Assignments/UART_TX/fm/UART_Tx.svf'.
+1
+###################################################################
+###################### Reference Container ########################
+###################################################################
+# Read Reference Design Verilog Files
+read_verilog -container r "/home/IC/Assignments/UART_TX/RTL/FSM_Controller.v"
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/IC/Assignments/UART_TX/RTL/FSM_Controller.v'
+Current container set to 'r'
+1
+read_verilog -container r "/home/IC/Assignments/UART_TX/RTL/Parity.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Assignments/UART_TX/RTL/Parity.v'
+1
+read_verilog -container r "/home/IC/Assignments/UART_TX/RTL/Serializer.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Assignments/UART_TX/RTL/Serializer.v'
+1
+read_verilog -container r "/home/IC/Assignments/UART_TX/RTL/Top_Module.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Assignments/UART_TX/RTL/Top_Module.v'
+1
+# Read Reference technology libraries
+read_db -container r $SSLIB
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+1
+read_db -container r $TTLIB
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+read_db -container r $FFLIB
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+1
+# set the top Reference Design 
+set_top UART_Tx
+Setting top design to 'r:/WORK/UART_Tx'
+Status:   Elaborating design UART_Tx   ...  
+Status:   Elaborating design serializer  Width=8 ...  
+Information: Created design named 'serializer_Width8'. (FE-LINK-13)
+Status:   Elaborating design Parity_calc  Width=8 ...  
+Information: Created design named 'Parity_calc_Width8'. (FE-LINK-13)
+Status:   Elaborating design FSM_controller   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'r:/WORK/UART_Tx'
+Reference design set to 'r:/WORK/UART_Tx'
+1
+###################################################################
+#################### Implementation Container #####################
+###################################################################
+# Read Implementation Design Files
+read_verilog -container i "/home/IC/Assignments/UART_TX/RTL/FSM_Controller.v"
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/IC/Assignments/UART_TX/RTL/FSM_Controller.v'
+Current container set to 'i'
+1
+read_verilog -container i "/home/IC/Assignments/UART_TX/RTL/Parity.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Assignments/UART_TX/RTL/Parity.v'
+1
+read_verilog -container i "/home/IC/Assignments/UART_TX/RTL/Serializer.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Assignments/UART_TX/RTL/Serializer.v'
+1
+read_verilog -netlist -container i "/home/IC/Assignments/UART_TX/syn/Files/UART_Tx.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Assignments/UART_TX/syn/Files/UART_Tx.v'
+1
+# Read Implementation technology libraries
+read_db -container i $SSLIB
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+1
+read_db -container i $TTLIB
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+read_db -container i $FFLIB
+Loading db file '/home/IC/Assignments/UART_TX/std_lib/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+1
+# set the top Implementation Design
+set_top UART_Tx
+Setting top design to 'i:/WORK/UART_Tx'
+Status:   Elaborating design serializer   ...  
+Status:   Elaborating design Parity_calc   ...  
+Status:   Elaborating design FSM_controller   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'i:/WORK/UART_Tx'
+Implementation design set to 'i:/WORK/UART_Tx'
+1
+###################### Matching Compare points ####################
+match
+Reference design is 'r:/WORK/UART_Tx'
+Implementation design is 'i:/WORK/UART_Tx'
+Status:  Checking designs...
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+environment         :          3          0          0          0          3
+mark                :          2          0          0          0          2
+transformation
+   map              :          1          0          0          0          1
+
+SVF files read:
+      /home/IC/Assignments/UART_TX/fm/UART_Tx.svf
+
+SVF files produced:
+  /home/IC/Assignments/UART_TX/fm/formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 30 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 13 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+1
+######################### Run Verification ########################
+set successful [verify]
+Reference design is 'r:/WORK/UART_Tx'
+Implementation design is 'i:/WORK/UART_Tx'
+    
+*********************************** Matching Results ***********************************    
+ 30 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 13 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: r:/WORK/UART_Tx
+ Implementation design: i:/WORK/UART_Tx
+ 30 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0       2      28       0      30
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+########################### Reporting ############################# 
+cd Reports
+report_passing_points > "passing_points.rpt"
+report_failing_points > "failing_points.rpt"
+report_aborted_points > "aborted_points.rpt"
+report_unverified_points > "unverified_points.rpt"
+cd ..
+#start_gui
+exit
+
+Maximum memory usage for this session: 460208 KB
+CPU usage for this session: 2.88 seconds
+Current time: Fri Jul 26 03:12:27 2024
+Elapsed time: 12 seconds
+
+Thank you for using Formality (R)!

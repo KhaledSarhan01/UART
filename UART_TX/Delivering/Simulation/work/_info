@@ -1,0 +1,138 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Digital/Eltamseh Diplomia/System/Full System/Simulation
+T_opt
+!s110 1723667800
+VOJdkT1Lh^Xf^Qan8GfC:e1
+04 10 4 work tb_UART_TX fast 0
+=2-902e161d0c93-66bd1557-339-4470
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vFSM_controller
+Z1 !s110 1723667799
+!i10b 1
+!s100 11FSJ^R<zd?^N5m5_n:@02
+Ijj0^3JSHXVC=G?Bl63EUg3
+Z2 dD:/Digital/Eltamseh Diplomia/System/Components/UART/UART_TX/Delivering/Simulation
+w1710444516
+8../Design/FSM_Controller.v
+F../Design/FSM_Controller.v
+!i122 1
+L0 1 120
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z5 !s108 1723667799.000000
+Z6 !s107 ../Testbench/Testbench.sv|../Design/UART_TX.v|../Design/Serializer.v|../Design/Parity.v|../Design/FSM_Controller.v|
+Z7 !s90 -reportprogress|300|-f|sourcefile.txt|
+!i113 0
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+n@f@s@m_controller
+vParity_calc
+R1
+!i10b 1
+!s100 <=_HfeoDb^_7coG4W8`5T3
+IH]>Wej]56Vea?ZR[G`P`F2
+R2
+w1710445859
+8../Design/Parity.v
+F../Design/Parity.v
+!i122 1
+L0 1 23
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R0
+n@parity_calc
+vserializer
+R1
+!i10b 1
+!s100 zFUB4Zdl0nIJidQFGT8SQ0
+ICcWedgU=lKh36ToJbhSM>2
+R2
+w1710445002
+8../Design/Serializer.v
+F../Design/Serializer.v
+!i122 1
+L0 1 37
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R0
+vtb_UART_TX
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R1
+!i10b 1
+!s100 mdSP[RWGE7nc98B9o@:ja0
+IXJ03Gk7NME_?aA_2l[h8:1
+S1
+R2
+w1723667794
+8../Testbench/Testbench.sv
+F../Testbench/Testbench.sv
+!i122 1
+L0 2 148
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R0
+ntb_@u@a@r@t_@t@x
+vUART_Tx
+R1
+!i10b 1
+!s100 ]5UEAhFSgI1RnP_mkYDjV0
+InCDb:_2@jebne9n2Y>h870
+R2
+w1721935194
+8../Design/UART_TX.v
+F../Design/UART_TX.v
+!i122 1
+L0 1 72
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R0
+n@u@a@r@t_@tx

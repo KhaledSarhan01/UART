@@ -1,0 +1,200 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/Digital/Eltamseh Diplomia/System/Full System/Simulation
+T_opt
+!s110 1723733662
+Vlk>Q9Yc:mUJWLMnMH4?2R2
+Z2 04 10 4 work tb_UART_Rx fast 0
+=6-902e161d0c93-66be169e-29d-236c
+Z3 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1723720387
+V^Z4SBSP4FkaQZnla?gU]d2
+R2
+=1-902e161d0c93-66bde2c2-30f-35b4
+R3
+o-quiet -auto_acc_if_foreign -work work +accs
+R4
+n@_opt1
+R5
+R1
+vConfiguration_block
+Z6 !s110 1723733746
+!i10b 1
+!s100 ?[>C?i5zR4KokZmVb1hA40
+ITgf5X2g500_P:46kE<DB73
+Z7 dD:/Digital/Eltamseh Diplomia/System/Components/UART/UART_RX/Delivering/Simulation
+w1723733366
+8../Design/Configuration.v
+F../Design/Configuration.v
+!i122 35
+L0 1 201
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z10 !s108 1723733746.000000
+!s107 Testbench.sv|../Design/UART_RX.v|../Design/Sampling_Register.v|../Design/Sampler.v|../Design/Controller.v|../Design/Configuration.v|
+Z11 !s90 -reportprogress|300|-f|sourcefile.txt|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@configuration_block
+vSampler
+R6
+!i10b 1
+!s100 6Ok3l@6jZ8[b:bRG8A_o10
+I[h^<082S^;M`Z=a6AD:020
+R7
+w1721151213
+8../Design/Sampler.v
+F../Design/Sampler.v
+!i122 35
+L0 1 46
+R8
+R9
+r1
+!s85 0
+31
+R10
+Z13 !s107 Testbench.sv|../Design/UART_RX.v|../Design/Sampling_Register.v|../Design/Sampler.v|../Design/Controller.v|../Design/Configuration.v|
+R11
+!i113 0
+R12
+R4
+n@sampler
+vSampling_Register
+R6
+!i10b 1
+!s100 ecKI>Ion>1_2fJj<FLelf0
+IiUM?f5d8OA3FPdZSg3eXh3
+R7
+w1723685799
+8../Design/Sampling_Register.v
+F../Design/Sampling_Register.v
+!i122 35
+L0 1 45
+R8
+R9
+r1
+!s85 0
+31
+R10
+R13
+R11
+!i113 0
+R12
+R4
+n@sampling_@register
+vtb_UART_Rx
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R6
+!i10b 1
+!s100 QXnjgz[fMKZhO>ET@HZXa0
+IhQg90M>XZOTiX]ZRh=i0P3
+S1
+R7
+w1723733659
+8Testbench.sv
+FTestbench.sv
+!i122 35
+L0 5 496
+R8
+R9
+r1
+!s85 0
+31
+R10
+R13
+R11
+!i113 0
+R12
+R4
+ntb_@u@a@r@t_@rx
+vUART_Rx
+R6
+!i10b 1
+!s100 YQ2mR8YTh]7P<[2H>>X]K2
+I9L]]jRo6=_7@YkgEVkn;e1
+R7
+w1723685851
+8../Design/UART_RX.v
+F../Design/UART_RX.v
+!i122 35
+L0 1 129
+R8
+R9
+r1
+!s85 0
+31
+R10
+R13
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_@rx
+vUART_Rx_Controller
+R6
+!i10b 1
+!s100 TiIH[d;]_A2z>@m6UfklE3
+I^9bKMG:0HInM_AWS;jYj;0
+R7
+w1723733586
+8../Design/Controller.v
+F../Design/Controller.v
+!i122 35
+L0 1 158
+R8
+R9
+r1
+!s85 0
+31
+R10
+R13
+R11
+!i113 0
+R12
+R4
+n@u@a@r@t_@rx_@controller
